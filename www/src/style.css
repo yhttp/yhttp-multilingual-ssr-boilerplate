@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@source "../../templates/**/*.mako";
+
+
+@theme {
+  --color-primary: var(--color-teal-50);
+  --color-secondary: var(--color-cyan-800);
+}
+
+
+@layer theme {
+  :root, :host {
+    @variant dark {
+      --color-primary: var(--color-slate-900);
+      --color-secondary: var(--color-teal-50);
+    }
+  }
+}
